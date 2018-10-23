@@ -1,5 +1,6 @@
 # Set the environment to "test"
-ENV['RACK_ENV'] = 'test'
+require 'pg'
+# ENV['RACK_ENV'] = 'test'
 
 # Bring in the contents of the `app.rb` file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
