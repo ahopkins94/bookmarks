@@ -5,7 +5,7 @@ def setup_test_database
 end
 
 def connect
-  Bookmark.add('http://www.makersacademy.com')
-  Bookmark.add('http://www.destroyallsoftware.com')
-  Bookmark.add('http://www.google.com')
+  Bookmark.add('http://www.makersacademy.com', "makers")
+  Bookmark.add('http://www.destroyallsoftware.com', "destroy")
+  Bookmark.add('http://www.google.com', "google")
 end

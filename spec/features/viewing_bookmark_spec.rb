@@ -4,8 +4,8 @@ feature 'Viewing bookmarks' do
     connect
     visit('/')
     click_button 'view all'
-    expect(page).to have_content "http://www.makersacademy.com"
-    expect(page).to have_content "http://www.destroyallsoftware.com"
-    expect(page).to have_content "http://www.google.com"
+    expect(page).to have_content "makers"
+    expect(page).to have_content "destroy"
+    expect(page).to have_content "google"
   end
 end
