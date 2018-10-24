@@ -4,8 +4,6 @@ require './lib/bookmark'
 
 class BookmarkManager < Sinatra::Base
 
-  enable :sessions
-
   get '/' do
     erb :'bookmarks/index'
   end
@@ -26,13 +24,11 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/update' do
-    session[:id] = params[:id]
     erb :'bookmarks/update'
   end
 
   post '/updated' do
-    @id = session[:id]
-    Bookmark.update(@id, params[:url], params[:title])
+    Bookmark.update(params[:id], params[:url], params[:title])
     redirect '/bookmarks'
   end
 

@@ -29,7 +29,7 @@ class Bookmark
     else
       conn = PG.connect(dbname: 'bookmark_manager')
     end
-    conn.exec("UPDATE bookmarks SET url = '#{new_url}', title = '#{new_title}' WHERE id = '#{id}';")  
+    conn.exec("UPDATE bookmarks SET url = '#{new_url}', title = '#{new_title}' WHERE id = '#{id}';")
   end
 
   def self.delete(id)
