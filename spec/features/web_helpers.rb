@@ -1,4 +1,5 @@
-#
-# def truncate
-#   ENV = PG.connect(dbname: 'bookmark_manager_test')
-# end
+require 'pg'
+def setup_test_database
+  connection = PG.connect(dbname: 'bookmark_manager_test')
+  connection.exec('TRUNCATE bookmarks;')
+end
